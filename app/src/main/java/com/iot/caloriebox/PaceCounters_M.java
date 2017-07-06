@@ -26,6 +26,7 @@ public class PaceCounters_M extends Activity implements SensorEventListener{
     private Sensor accelerometerSensor;
 
     TextView textView;
+    int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +58,6 @@ public class PaceCounters_M extends Activity implements SensorEventListener{
 
     @Override
     public void onSensorChanged(SensorEvent event){
-        int count = 0;
         if(event.sensor.getType() == Sensor.TYPE_ACCELEROMETER){
             long currentTime = System.currentTimeMillis();
             long gabOfTime = (currentTime - lastTime);
@@ -72,9 +72,11 @@ public class PaceCounters_M extends Activity implements SensorEventListener{
                 if(speed > SHAKE_THRESHOLD){
                     count++;
                     // 화면에서 카운트 증가
-//                    textView.setText(Integer.toString(count));
-                    String str = String.format("%d",count);
-                    textView.setText(str);
+                    textView.setText(Integer.toString(count));
+//                    String str = String.format("%d",count);
+//                    textView.setText(str);
+
+//                    textView.append(Integer.toString(count));
                 }
 
                 lastX = event.values[DATA_X];
