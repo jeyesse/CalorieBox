@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".PaceCounters_M" />
-        <activity android:name=".BluetoothConnect_M"/>
+        <activity android:name=".bluetooth.BluetoothConnect_M"/>
         <activity android:name=".DeviceListActivity"/>
     </application>
 
