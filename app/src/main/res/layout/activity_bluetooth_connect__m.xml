@@ -24,8 +24,8 @@ tools:context="com.iot.caloriebox.bluetooth.BluetoothConnect_M">
         android:id="@+id/btn1"
         android:text="1"
         android:textColor="#FFFFFF"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
+        android:layout_width="158dp"
+        android:layout_height="115dp"
         android:gravity="center_horizontal|bottom"
         android:background="@color/colorPrimary"
         android:layout_centerVertical="true"
@@ -37,7 +37,7 @@ tools:context="com.iot.caloriebox.bluetooth.BluetoothConnect_M">
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
-        app:layout_constraintVertical_bias="0.746"
+        app:layout_constraintVertical_bias="0.45"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.0" />
@@ -46,8 +46,8 @@ tools:context="com.iot.caloriebox.bluetooth.BluetoothConnect_M">
         android:id="@+id/btn2"
         android:text="2"
         android:textColor="#FFFFFF"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
+        android:layout_width="158dp"
+        android:layout_height="115dp"
         android:gravity="center_horizontal|bottom"
         android:background="@color/colorAccent"
         android:layout_alignTop="@+id/btn1"
@@ -61,13 +61,13 @@ tools:context="com.iot.caloriebox.bluetooth.BluetoothConnect_M">
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.406"
-        app:layout_constraintVertical_bias="0.746" />
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintVertical_bias="0.45" />
 
     <TextView
         android:id="@+id/textWeight"
-        android:layout_width="170dp"
-        android:layout_height="114dp"
+        android:layout_width="169dp"
+        android:layout_height="69dp"
         android:text="TextView"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/button_connect"
@@ -78,5 +78,57 @@ tools:context="com.iot.caloriebox.bluetooth.BluetoothConnect_M">
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
         app:layout_constraintVertical_bias="0.066" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="food"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="368dp"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="164dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="436dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="전송"
+        tools:layout_editor_absoluteX="258dp"
+        tools:layout_editor_absoluteY="436dp"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calorie"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="448dp"/>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="165dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="361dp"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="선택"
+        tools:layout_editor_absoluteX="258dp"
+        tools:layout_editor_absoluteY="361dp"/>
 
 </android.support.constraint.ConstraintLayout>
