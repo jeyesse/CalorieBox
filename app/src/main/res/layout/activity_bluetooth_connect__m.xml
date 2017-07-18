@@ -85,8 +85,16 @@ tools:context="com.iot.caloriebox.BluetoothConnect_M">
         android:layout_height="wrap_content"
         android:text="food"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="368dp"/>
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        android:layout_marginTop="59dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.066" />
 
     <EditText
         android:id="@+id/editText"
@@ -94,16 +102,18 @@ tools:context="com.iot.caloriebox.BluetoothConnect_M">
         android:layout_height="46dp"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="436dp"/>
+        app:layout_constraintLeft_toRightOf="@+id/textView3"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView3" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="전송"
-        tools:layout_editor_absoluteX="258dp"
-        tools:layout_editor_absoluteY="436dp"/>
+        app:layout_constraintLeft_toRightOf="@+id/editText"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText" />
 
     <TextView
         android:id="@+id/textView3"
@@ -111,8 +121,16 @@ tools:context="com.iot.caloriebox.BluetoothConnect_M">
         android:layout_height="wrap_content"
         android:text="Calorie"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="448dp"/>
+        android:layout_marginLeft="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="63dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editText2"
@@ -120,15 +138,17 @@ tools:context="com.iot.caloriebox.BluetoothConnect_M">
         android:layout_height="44dp"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="361dp"/>
+        app:layout_constraintLeft_toRightOf="@+id/textView2"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView2" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="선택"
-        tools:layout_editor_absoluteX="258dp"
-        tools:layout_editor_absoluteY="361dp"/>
+        app:layout_constraintLeft_toRightOf="@+id/editText2"
+        android:layout_marginLeft="14dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText2" />
 
 </android.support.constraint.ConstraintLayout>

@@ -22,6 +22,7 @@
         <activity android:name=".PaceCounters_M" />
         <activity android:name=".BluetoothConnect_M"/>
         <activity android:name=".DeviceListActivity"/>
+        <service android:name=".PaceCountersService_M"/>
     </application>
 
 </manifest>

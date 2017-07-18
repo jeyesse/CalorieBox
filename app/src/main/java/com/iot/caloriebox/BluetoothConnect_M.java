@@ -253,6 +253,7 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
 
                     break;
 
+
                 case R.id.btn2:
 
                     value = String.valueOf(cal*11/100);

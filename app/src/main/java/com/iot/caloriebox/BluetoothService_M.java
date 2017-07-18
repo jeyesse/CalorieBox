@@ -409,9 +409,4 @@ public class BluetoothService_M {
 
         r.write(out, mode) ; // ConnectedThread클래스 내에 있는 write함수를 호출하여 메시지를 보낸다.
     }
-
-
-
 }
-
-
