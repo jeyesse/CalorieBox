@@ -1,4 +1,4 @@
-package com.iot.caloriebox.bluetooth;
+package com.iot.caloriebox;
 
 
 
@@ -10,8 +10,6 @@ import android.content.Intent;
 import android.os.Handler;
 import android.util.Log;
 
-
-import com.iot.caloriebox.DeviceListActivity;
 
 import java.io.IOException;
 import java.io.InputStream;

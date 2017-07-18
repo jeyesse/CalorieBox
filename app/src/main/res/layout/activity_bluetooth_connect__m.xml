@@ -4,7 +4,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context="com.iot.caloriebox.bluetooth.BluetoothConnect_M">
+tools:context="com.iot.caloriebox.BluetoothConnect_M">
 
     <Button
         android:id="@+id/button_connect"

@@ -1,4 +1,4 @@
-package com.iot.caloriebox.bluetooth;
+package com.iot.caloriebox;
 
 
 import android.app.Activity;
@@ -11,8 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.iot.caloriebox.R;
 
 public class BluetoothConnect_M extends Activity implements View.OnClickListener {
 
@@ -254,7 +252,6 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
                     }
 
                     break;
-
 
                 case R.id.btn2:
 
