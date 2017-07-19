@@ -136,6 +136,7 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
                     textViewWeight.setText(readMessage);
 
                     Log.i("readMessage value",readMessage);
+
                     foodWeight = Float.parseFloat(readMessage);
 
                     break;
@@ -259,7 +260,8 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
                     break;
 
                 case R.id.button_paceCounters:  // 만보기 버튼 클릭시
-                    Intent intent = new Intent(getApplicationContext(), PaceCounters_M.class);
+//                    Intent intent = new Intent(getApplicationContext(), PaceCounters_M.class);
+                    Intent intent = new Intent(getApplicationContext(), StepCounter_M.class);
                     startActivity(intent);
                     break;
 

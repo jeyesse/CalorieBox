@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.iot.caloriebox.StepCounter_M">
+
+    <!--<TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dip"
+        android:text="Androday Pedometer APP"
+        android:textSize="30dip"
+        android:layout_margin="20dip"/>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout01"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="100dip"
+            android:layout_marginTop="30dip"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+        </TextView>
+        <Button
+            android:id="@+id/btnStopService"
+            android:layout_height="80dip"
+            android:layout_width="80dip"
+            android:text="Go !!"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dip">
+        </Button>
+    </RelativeLayout>-->
+
+
+    <TextView
+        android:id="@+id/center"
+        android:layout_width="38dp"
+        android:layout_height="29dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="148dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/buttonStep"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:background="@drawable/step"
+        android:layout_marginLeft="26dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/center"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/center"
+        app:layout_constraintHorizontal_bias="1.0"/>
+
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:background="@drawable/stop"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/center"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/center"/>
+
+    <TextView
+        android:id="@+id/textViewStep"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="0"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.401"/>
+
+    <TextView
+        android:id="@+id/textViewConsumeCalories"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="0"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStep"
+        app:layout_constraintVertical_bias="0.187"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="총 걸음수"
+        android:textSize="20dp"
+        app:layout_constraintRight_toLeftOf="@+id/textViewStep"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewStep"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="소모 칼로리"
+        android:textSize="20dp"
+        app:layout_constraintRight_toLeftOf="@+id/textViewConsumeCalories"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewConsumeCalories"
+        app:layout_constraintHorizontal_bias="0.511"/>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="걸음"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textViewStep"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewStep"
+        app:layout_constraintHorizontal_bias="0.511"/>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="kcal"
+        android:textSize="20dp"
+        android:gravity="left"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textViewConsumeCalories"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewConsumeCalories"/>
+</android.support.constraint.ConstraintLayout>
