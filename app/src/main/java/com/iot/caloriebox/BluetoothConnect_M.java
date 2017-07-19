@@ -29,7 +29,7 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
 
     private BluetoothService_M bluetoothService = null;
 
-    int cal;
+    float foodWeight;
 
 
     private static final boolean D = true;
@@ -129,7 +129,7 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
 
                     textWeight.setText(readMessage);
 
-                    cal = Integer.parseInt(readMessage);
+                    foodWeight = Float.parseFloat(readMessage);
 
 
                     break;
@@ -226,7 +226,7 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
     private View.OnClickListener _clickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            String value;
+            String foodCalorie;
 
             //분기.
             switch (v.getId()) {
@@ -242,10 +242,10 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
 
                 case R.id.btn1:
 
-                    value = String.valueOf(cal*109/100);
+                    foodCalorie = String.valueOf(foodWeight *109/100);
 
                     if (bluetoothService.getState() == BluetoothService_M.STATE_CONNECTED) { //연결된 상태에서만 값을 보낸다.
-                        sendMessage(value, MODE_REQUEST);
+                        sendMessage(foodCalorie, MODE_REQUEST);
                         _selectedButton = 1;
                     } else {
                         Toast.makeText(getApplicationContext(), "블루투스 연결을 먼저 해 주세요!! ", Toast.LENGTH_SHORT).show();
@@ -256,10 +256,10 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
 
                 case R.id.btn2:
 
-                    value = String.valueOf(cal*11/100);
+                    foodCalorie = String.valueOf(foodWeight *11/100);
 
                     if (bluetoothService.getState() == BluetoothService_M.STATE_CONNECTED) {
-                        sendMessage(value, MODE_REQUEST);
+                        sendMessage(foodCalorie, MODE_REQUEST);
                         _selectedButton = 2;
                     } else {
                         Toast.makeText(getApplicationContext(), "블루투스 연결을 먼저 해 주세요!! ", Toast.LENGTH_SHORT).show();
