@@ -23,6 +23,7 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
 
     // Layout
     private Button button_Connect;
+    private Button button_paceCounters;
     private TextView textViewWeight;
     private TextView textViewCalorie;
     private Button btn1;
@@ -176,8 +177,10 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
         // button state : 상태를 -1로 초기화
         _selectedButton = -1;
 
-        button_Connect = (Button) findViewById(R.id.button_connect);
+        button_Connect = (Button)findViewById(R.id.button_connect);
         button_Connect.setOnClickListener(_clickListener);
+        button_paceCounters = (Button)findViewById(R.id.button_paceCounters);
+        button_paceCounters.setOnClickListener(_clickListener);
 
         textViewWeight = (TextView)findViewById(R.id.textViewWeight);
         textViewCalorie = (TextView)findViewById(R.id.textViewCalorie);
@@ -252,6 +255,11 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
                     } else {
                         finish();
                     }
+                    break;
+
+                case R.id.button_paceCounters:  // 만보기 버튼 클릭시
+                    Intent intent = new Intent(getApplicationContext(), PaceCounters_M.class);
+                    startActivity(intent);
                     break;
 
                 case R.id.btn1: // 육류
