@@ -23,9 +23,14 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
 
     // Layout
     private Button button_Connect;
+    private TextView textViewWeight;
+    private TextView textViewCalorie;
     private Button btn1;
     private Button btn2;
-    private TextView textWeight;
+    private Button btn3;
+    private Button btn4;
+    private Button btn5;
+    private Button btn6;
 
     private BluetoothService_M bluetoothService = null;
 
@@ -127,10 +132,9 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
 
                     readMessage = new String(readBuf);
 
-                    textWeight.setText(readMessage);
+                    textViewWeight.setText(readMessage);
 
                     foodWeight = Float.parseFloat(readMessage);
-
 
                     break;
 
@@ -174,11 +178,23 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
 
         button_Connect = (Button) findViewById(R.id.button_connect);
         button_Connect.setOnClickListener(_clickListener);
+
+        textViewWeight = (TextView)findViewById(R.id.textViewWeight);
+        textViewCalorie = (TextView)findViewById(R.id.textViewCalorie);
+
         btn1 = (Button) findViewById(R.id.btn1);
         btn1.setOnClickListener(_clickListener);
         btn2 = (Button) findViewById(R.id.btn2);
         btn2.setOnClickListener(_clickListener);
-        textWeight = (TextView) findViewById(R.id.textWeight);
+        btn3 = (Button) findViewById(R.id.btn3);
+        btn3.setOnClickListener(_clickListener);
+        btn4 = (Button) findViewById(R.id.btn4);
+        btn4.setOnClickListener(_clickListener);
+        btn5 = (Button) findViewById(R.id.btn5);
+        btn5.setOnClickListener(_clickListener);
+        btn6 = (Button) findViewById(R.id.btn6);
+        btn6.setOnClickListener(_clickListener);
+
 
         // BluetoothService 클래스 생성
         if (bluetoothService == null) {
@@ -230,9 +246,7 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
 
             //분기.
             switch (v.getId()) {
-
                 case R.id.button_connect:  //모든 블루투스의 활성화는 블루투스 서비스 객체를 통해 접근한다.
-
                     if (bluetoothService.getDeviceState()) { // 블루투스 기기의 지원여부가 true 일때
                         bluetoothService.enableBluetooth();  //블루투스 활성화 시작.
                     } else {
@@ -240,31 +254,76 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
                     }
                     break;
 
-                case R.id.btn1:
-
-                    foodCalorie = String.valueOf(foodWeight *109/100);
-
+                case R.id.btn1: // 육류
+//                    foodCalorie = String.valueOf(foodWeight * 1.1);
+                    foodCalorie = String.format("%.1f",(foodWeight * 1.09));
                     if (bluetoothService.getState() == BluetoothService_M.STATE_CONNECTED) { //연결된 상태에서만 값을 보낸다.
+                        textViewCalorie.setText(foodCalorie);
                         sendMessage(foodCalorie, MODE_REQUEST);
                         _selectedButton = 1;
                     } else {
                         Toast.makeText(getApplicationContext(), "블루투스 연결을 먼저 해 주세요!! ", Toast.LENGTH_SHORT).show();
                     }
-
                     break;
 
-
-                case R.id.btn2:
-
-                    foodCalorie = String.valueOf(foodWeight *11/100);
-
+                case R.id.btn2: // 어류
+//                    foodCalorie = String.valueOf(foodWeight * 1.3);
+                    foodCalorie = String.format("%.1f",(foodWeight * 1.35));
                     if (bluetoothService.getState() == BluetoothService_M.STATE_CONNECTED) {
+                        textViewCalorie.setText(foodCalorie);
                         sendMessage(foodCalorie, MODE_REQUEST);
                         _selectedButton = 2;
                     } else {
                         Toast.makeText(getApplicationContext(), "블루투스 연결을 먼저 해 주세요!! ", Toast.LENGTH_SHORT).show();
                     }
+                    break;
 
+                case R.id.btn3: // 채소
+//                    foodCalorie = String.valueOf(foodWeight * 0.2);
+                    foodCalorie = String.format("%.1f",(foodWeight * 0.22));
+                    if (bluetoothService.getState() == BluetoothService_M.STATE_CONNECTED) {
+                        textViewCalorie.setText(foodCalorie);
+                        sendMessage(foodCalorie, MODE_REQUEST);
+                        _selectedButton = 2;
+                    } else {
+                        Toast.makeText(getApplicationContext(), "블루투스 연결을 먼저 해 주세요!! ", Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+
+                case R.id.btn4: // 쌀
+//                    foodCalorie = String.valueOf(foodWeight * 1.5);
+                    foodCalorie = String.format("%.1f",(foodWeight * 1.52));
+                    if (bluetoothService.getState() == BluetoothService_M.STATE_CONNECTED) {
+                        textViewCalorie.setText(foodCalorie);
+                        sendMessage(foodCalorie, MODE_REQUEST);
+                        _selectedButton = 2;
+                    } else {
+                        Toast.makeText(getApplicationContext(), "블루투스 연결을 먼저 해 주세요!! ", Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+
+                case R.id.btn5: // 과일
+//                    foodCalorie = String.valueOf(foodWeight * 0.5);
+                    foodCalorie = String.format("%.1f",(foodWeight * 0.57));
+                    if (bluetoothService.getState() == BluetoothService_M.STATE_CONNECTED) {
+                        textViewCalorie.setText(foodCalorie);
+                        sendMessage(foodCalorie, MODE_REQUEST);
+                        _selectedButton = 2;
+                    } else {
+                        Toast.makeText(getApplicationContext(), "블루투스 연결을 먼저 해 주세요!! ", Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+
+                case R.id.btn6: // 빵
+//                    foodCalorie = String.valueOf(foodWeight * 1.9);
+                    foodCalorie = String.format("%.1f",(foodWeight * 1.98));
+                    if (bluetoothService.getState() == BluetoothService_M.STATE_CONNECTED) {
+                        textViewCalorie.setText(foodCalorie);
+                        sendMessage(foodCalorie, MODE_REQUEST);
+                        _selectedButton = 2;
+                    } else {
+                        Toast.makeText(getApplicationContext(), "블루투스 연결을 먼저 해 주세요!! ", Toast.LENGTH_SHORT).show();
+                    }
                     break;
 
                 default:
