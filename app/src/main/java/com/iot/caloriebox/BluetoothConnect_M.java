@@ -135,6 +135,7 @@ public class BluetoothConnect_M extends Activity implements View.OnClickListener
 
                     textViewWeight.setText(readMessage);
 
+                    Log.i("readMessage value",readMessage);
                     foodWeight = Float.parseFloat(readMessage);
 
                     break;
